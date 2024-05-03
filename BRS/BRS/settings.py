@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'studentmarks.apps.StudentmarksConfig'
+    'studentmarks.apps.StudentmarksConfig',
     'corsheaders'
 ]
 
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware', 
-'django.middleware.common.CommonMiddleware'
+    'django.middleware.common.CommonMiddleware'
 ]
 
 ROOT_URLCONF = 'BRS.urls'
@@ -131,4 +131,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_ALLOW_ALL=True
-CORS_ORIGIN_WHITELIST=('http://localhost:8081')
+# CORS_ORIGIN_WHITELIST=('http://localhost:8081')
