@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'studentmarks.apps.StudentmarksConfig'
 ]
 
 MIDDLEWARE = [
@@ -74,10 +76,14 @@ WSGI_APPLICATION = 'BRS.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+'default': {
+'ENGINE': 'django.db.backends.mysql',
+'NAME': 'BRS', # Название БД, которая будет у вас. Например, раписание занятий ClassesTimetable.
+'USER': 'root', # Имя пользователя для подключения к БД.
+'PASSWORD': 'qwertyU123', # Пароль для подключения к БД.
+'HOST': '127.0.0.1',
+'PORT': '3306',
+}
 }
 
 
