@@ -7,3 +7,22 @@ class DisciplinesSerializer(serializers.ModelSerializer):
         fields = ('id',
                   'name')
                   
+class TermSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Term
+        fields = ('id',
+                  'type_id',
+                  'start_data',
+                  'end_data',
+                  'year')
+        
+class TypeTerm(serializers.ModelSerializer):
+    class Meta:
+        model = TypeTerm
+        fields = ('id',
+                  'name')
+        
+        
+    
+                  
+                
